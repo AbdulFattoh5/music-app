@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+</head>
+
+<body>
+    <!-- Loading Page -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Main Section -->
+    <section class="main">
+        <div class="container">
+            <div class="main_wrap">
+                <img class="logo" src="./img/Big_logo.svg" alt="">
+                <h1 class="main_h">PANDA</h1>
+                <p class="main_p">PANDA music is Abdulfattoh's playlist app</p>
+                <button class="main_btn">Next</button>
+                <h2 class="main_social">Social Media</h2>
+                <div class="media">
+                    <a class="app" href="http://www.instagram.com/abdulfattox55"><i class="fab fa-instagram"></i></a>
+                    <a class="apps" href="https://t.me/+zr82RZHel2A0OTIy"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="player">
+        <div class="container">
+            <div class="header">
+                <div class="header_wrap">
+                    <ul class="menu">
+                        <li class="item">
+                            <div class="menu_link">
+                                <img class="menu_link_img" src="./img/little_logo.svg" alt="">
+                                <h3 class="menu_link_h">PANDA USER</h3>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="menu_link">
+                                <span class="link">Modes</span>
+                                <button class="dark_mode">Light mode</button>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="menu_link">
+                                <span class="link">Social Media</span>
+                                <div class="media">
+                                    <a class="app" href="http://www.instagram.com/abdulfattox55"><i
+                                            class="fab fa-instagram"></i></a>
+                                    <a href="https://t.me/+zr82RZHel2A0OTIy" class="app"><i
+                                            class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="header_burger-btn" id="burger">
+                        <span class="header_burger-span1"></span>
+                        <span class="header_burger-span2"></span>
+                        <span class="header_burger-span3"></span>
+                    </button>
+                </div>
+                <div class="header_overlay"></div>
+            </div>
+            <div class="Panda">
+                <h1 class="player_title">Panda Music</h1>
+                <div class="Panda_music-player">
+                    <div class="wrapper">
+                        <!-- <div class="volume">
+                            <input oninput="thisVolume(this.value)" onchange="thisVolume(this.value)" id="volume_slider"
+                                type="range" min="0" max="100" value="100">
+                            <p id="rangeValue">100</p>
+                        </div> -->
+                        <div class="player_menu">
+                            <i id="btn_close" class="fal fa-times"></i>
+                            <div class="menu_player">
+                                <ul>
+                                    <li class="player_menu_link">
+                                        <a id="link" href=""><i class="far fa-external-link"></i></a>
+                                        <p class="player_menu_link_p">Link</p>
+                                    </li>
+                                    <li class="player_menu_link">
+                                        <a id="download" href="" download><i class="fas fa-download"></i></a>
+                                        <p class="player_menu_link_p">Download</p>
+                                    </li>
+                                    <li class="player_menu_link">
+                                        <button id="randomMusicBtn"><i class="fad fa-album-collection"></i></button>
+                                        <p class="player_menu_link_p">Random music</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menu_player_overlay"></div>
+                        </div>
+                        <div class="randomMusic">
+                            <div class="randomMusic_header">
+                                <i id="randomMusicClose" class="fal fa-times"></i>
+                                <h3 class="randomMusic_h">Random music</h3>
+                                <img src="./img/little_logo.svg" alt="">
+                            </div>
+                            <div class="randmoMusic_content">
+                                <div class="google_anim">
+                                    <div class="blue ball"></div>
+                                    <div class="red ball"></div>
+                                    <div class="yellow ball"></div>
+                                    <div class="green ball"></div>
+                                </div>
+                            </div>
+                            <div class="randmoMusic_footer">
+                                <button class="randmoMusicGenerateBtn">Generate</button>
+                            </div>
+                            <div class="randmoMusic_play">
+                                <i id="RMclose" class="fal fa-times"></i>
+                                <img class="img_area_RM" src="./img/music-1.jpg" alt="">
+                                <div class="randmoMusic_playInfo">
+                                    <p class="RMname RMinfo">Coming-Back-For-You</p>
+                                    <p class="RMartist RMinfo">Fireboy DML</p>
+                                </div>
+                                <div class="RMprogress_area">
+                                    <div class="RMprogress_bar"></div>
+                                    <div class="RMtimer">
+                                        <span class="RMcurrent">0:00</span>
+                                        <span class="RMduration">0:00</span>
+                                    </div>
+                                    <audio id="RM_audio" src=""></audio>
+                                </div>
+                                <div class="randomMusic_controls">
+                                    <div class="RMplay_pause">
+                                        <button id="RMplay" class="material_icons">
+                                            <i class="button fas fa-play"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button class="RMagain">Try again</button>
+                            </div>
+                            <div class="randmoMusic_play_overlay"></div>
+                        </div>
+                        <div class="top_bar">
+                            <i id="volume_i" class="fas fa-angle-down"></i>
+                            <span>Now Playing</span>
+                            <i id="Menu_player" class="far fa-ellipsis-h"></i>
+                        </div>
+                        <div class="img_area">
+                            <img src="./img/music-1.jpg" alt="">
+                        </div>
+                        <div class="song_details">
+                            <p class="name">Coming-Back-For-You</p>
+                            <p class="artist">Fireboy DML</p>
+                        </div>
+                        <div class="progress_area">
+                            <div class="progress_bar"></div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <audio id="main_audio" src=""></audio>
+                        </div>
+                        <div class="controls">
+                            <button id="lyrics" class="material_icons">
+                                <i class="fas fa-microphone-stand"></i>
+                            </button>
+                            <button id="prev" class="material_icons">
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            <div class="play_pause">
+                                <button id="play" class="material_icons">
+                                    <i class="btn button fas fa-play"></i>
+                                </button>
+                            </div>
+                            <button id="next" class="material_icons">
+                                <i class="fas fa-step-forward"></i>
+                            </button>
+                            <button id="more-music" class="material_icons">
+                                <i class="fas fa-list-music"></i>
+                            </button>
+                        </div>
+                        <div class="music_list">
+                            <div class="music_header">
+                                <div class="row">
+                                    <i class="fas fa-list-music"></i>
+                                    <span>Music list</span>
+                                </div>
+                                <i id="close" class="fal fa-times"></i>
+                            </div>
+                            <ul>
+
+                            </ul>
+                        </div>
+                        <div class="lyrics">
+                            <i id="close_btn" class="fal fa-times"></i>
+                            <div class="lyrics_div">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./playlist.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
